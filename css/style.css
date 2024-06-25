@@ -1,0 +1,258 @@
+/* Importing font from google fonts (Poppins ) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/**************************** Image sizes and font sizes can be adjusted as per the requirements ******************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Removing the highlighting color when tapped  */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* body styling  */
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+/* making the upload svg color white  */
+.upload-desc img {
+  filter: invert(100%) sepia(0%) saturate(7491%) hue-rotate(324deg)
+    brightness(106%) contrast(100%);
+}
+
+/* Main Container styling  */
+#container {
+  padding: 5rem;
+  border: none;
+  border-radius: 15px;
+  background-color: #e3f5fb;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.095),
+    -2px -2px 15px rgba(0, 0, 0, 0.095);
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  width: 80%;
+  min-height: 80vh;
+  align-items: stretch;
+}
+/* image container styling  */
+.img-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo image uploaded by user  */
+
+#logo-upload-img {
+  display: none;
+  position: absolute;
+  bottom: 100px;
+  width: 30px;
+  height: 20px;
+}
+
+/* title style  */
+.product-title {
+  font-size: 3rem;
+}
+.img-container #product-img {
+  width: 100%;
+  transition: all 0.1s;
+}
+
+/* setting display none of input element  */
+input {
+  display: none;
+}
+
+/* loader svg  */
+#loader {
+  display: none;
+  transition: all 0.1s;
+  animation: rotate 1s linear infinite;
+}
+
+/* upload loader stying  */
+
+#upload-loader {
+  display: none;
+  transition: all 0.1s;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Description styling  */
+.desc-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 5px;
+  border: none;
+  justify-content: center;
+}
+
+/* label styling  */
+label#upload-label {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #14aae2;
+  color: white;
+  width: 80%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* hover effect in label  */
+label#upload-label:hover {
+  opacity: 0.8;
+}
+/* label title styling */
+#file-head {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* upload descriotion styling  */
+.upload-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* color panel  */
+
+.color-panel {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+/* styling all the color spans  */
+
+#Blue {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0095e4;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 7px solid #adddf6;
+}
+#Pink {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e11a72;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#Yellow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffcc3c;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Media queries  */
+
+@media only screen and (max-width: 1024px) {
+  #container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+  }
+  #file-head {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+  label#upload-label {
+    width: 100%;
+  }
+
+  /* image uploaded by user  */
+
+  #logo-upload-img {
+    display: none;
+    position: absolute;
+    bottom: 100px;
+    width: 30px;
+    height: 20px;
+  }
+}
+
+/* Media queries  */
+
+@media only screen and (max-width: 750px) {
+  .product-title {
+    font-size: 1.8rem;
+  }
+  .img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo-upload-img {
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    width: 30px;
+    height: 20px;
+  }
+  label#upload-label {
+    gap: 10px;
+  }
+  #file-head {
+    font-size: 0.95rem;
+  }
+
+  #Blue {
+    width: 30px;
+    height: 30px;
+    border: 7px solid #adddf6;
+  }
+  #Pink {
+    width: 30px;
+    height: 30px;
+  }
+  #Yellow {
+    width: 30px;
+    height: 30px;
+  }
+}
