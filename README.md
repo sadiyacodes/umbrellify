@@ -13,4 +13,9 @@ Smartphone view:
 ![mobileSSumbrellify](https://postimage.me/images/2024/06/25/mobileSSumbrellify.png)
 
 
+## Authors
+
+- [Sadiya Parveen](https://www.github.com/sadiyacodes)
+
+
 
